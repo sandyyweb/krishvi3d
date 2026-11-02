@@ -1,0 +1,114 @@
+/* ===== About page: its own layouts, same Krishvi palette, type and motion ===== */
+
+/* page hero */
+.ab-hero{min-height:88vh;padding:9rem 0 4rem;align-items:end}
+.ab-hero .bg{opacity:.34;background-position:center 40%}
+.ab-hero .wrap{display:block;position:relative;z-index:2}
+.ab-crumb{display:flex;gap:.6rem;align-items:center;font-size:.9rem;opacity:.8;margin-bottom:2rem}
+.ab-crumb a:hover{color:var(--saf)}.ab-crumb i{font-style:normal;opacity:.5}
+.ab-hero h1{font-size:clamp(3.6rem,11vw,10rem);max-width:12ch}
+.ab-hero .row{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-top:2.4rem}
+.ab-hero p{max-width:460px;margin:0;opacity:.88;font-size:1.1rem}
+.ab-seal{position:relative;width:132px;height:132px;flex:none}
+.ab-seal svg{width:100%;height:100%;animation:spin 18s linear infinite}.ab-seal text{fill:var(--cream);font-size:11.5px;letter-spacing:.22em;font-family:var(--sans)}
+.ab-seal i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal;font-size:2rem}
+
+/* intro: editorial statement */
+.ab-in{display:grid;grid-template-columns:1fr 1.15fr;gap:6rem;align-items:start}
+.ab-in .lead{position:sticky;top:7rem}
+.ab-in .lead h2{margin-top:.4rem}
+.ab-in .txt p{font-size:1.12rem;max-width:560px}
+.ab-in .txt p+p{margin-top:1.4rem;opacity:.78;font-size:1.02rem}
+.ab-in .txt p.ab-big{font-size:clamp(1.7rem,3vw,2.5rem);opacity:1;max-width:none;margin:0 0 2rem}
+.ab-big{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.22;letter-spacing:-.02em;margin-bottom:2rem}
+.ab-big span{opacity:.15}
+.ab-sign{display:flex;align-items:center;gap:1rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid rgba(14,33,24,.2);font-family:var(--serif);font-style:italic;font-size:1.3rem}
+.ab-sign b{width:44px;height:44px;border-radius:50%;background:var(--ink);display:grid;place-items:center;font-style:normal;font-size:1.2rem}
+
+/* principles: list + live preview */
+.ab-pr{background:var(--sand)}
+.ab-pr .mn{grid-template-columns:1.25fr 1fr;margin-top:3.5rem}
+.ab-pr .item{padding:1.8rem 0;grid-template-columns:3.2rem 1fr;gap:.3rem 1rem}
+.ab-pr .item .no{font-family:var(--sans);font-size:.85rem;letter-spacing:.2em;opacity:.55;padding-top:.7rem}
+.ab-pr .item h4{grid-column:2}.ab-pr .item p{grid-column:2;max-width:480px}
+.ab-pr .item span.no{font-size:.85rem}
+.ab-pv{position:sticky;top:7rem;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--leaf);box-shadow:0 40px 80px -40px rgba(14,33,24,.6)}
+.ab-pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .7s,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.ab-pv img.on{opacity:1;transform:scale(1)}
+.ab-pv::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 10px rgba(245,239,226,.9)}
+
+/* kitchen: alternating rows */
+.ab-ki{padding:8rem 0 6rem}
+.ab-ki .head{margin-bottom:5rem}
+.ab-row{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-bottom:7rem}
+.ab-row:last-child{margin-bottom:0}
+.ab-row.rev .ph{order:2}
+.ab-row .ph{position:relative;aspect-ratio:5/4;border-radius:var(--r);overflow:hidden;background:var(--leaf);box-shadow:0 40px 80px -30px #000}
+.ab-row .ph img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover}
+.ab-row .ph figcaption{position:absolute;left:1.2rem;bottom:1.2rem;z-index:2;background:var(--cream);color:var(--ink);padding:.4rem 1rem;border-radius:99px;font-size:.9rem}
+.ab-row small{display:block;color:var(--saf);letter-spacing:.22em;font-size:.82rem;margin-bottom:.8rem}
+.ab-row h3{font-size:clamp(2.2rem,4.4vw,4rem);margin-bottom:1.2rem}
+.ab-row p{max-width:440px;opacity:.82;font-size:1.05rem}
+.ab-row ul{list-style:none;margin-top:1.6rem;max-width:440px}
+.ab-row li{display:flex;gap:.8rem;align-items:center;padding:.7rem 0;border-bottom:1px solid rgba(245,239,226,.16);font-family:var(--serif);font-size:1.2rem}
+.ab-row li::before{content:"✺";color:var(--saf);font-size:.8em}
+
+/* numbers band */
+.ab-nm{background:var(--saf);color:var(--ink);padding:5.5rem 0}
+.ab-nm .g{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.ab-nm .g>div{padding-left:1.6rem;border-left:1px solid rgba(14,33,24,.35)}
+.ab-nm b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6.4vw,5.6rem);line-height:1;letter-spacing:-.03em}
+.ab-nm small{display:block;margin-top:.6rem;font-size:.95rem;opacity:.8}
+
+/* visit rhythm: tabs */
+.ab-vs{background:var(--cream)}
+.ab-vs .tabs{margin:2.2rem 0 3rem}
+.ab-vs .tabs button:hover{border-color:var(--ink)}
+.ab-tp{display:grid;grid-template-columns:1.05fr 1fr;gap:5rem;align-items:center}
+.ab-tp .ph{position:relative;aspect-ratio:4/3.4;border-radius:999px 999px var(--r) var(--r);overflow:hidden;background:var(--sand);max-width:560px;width:100%}
+.ab-tp .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.ab-tp .ph img.on{opacity:1;transform:scale(1)}
+.ab-tp .pn{display:none}.ab-tp .pn.on{display:block;animation:abin .8s cubic-bezier(.2,.8,.2,1)}
+@keyframes abin{from{opacity:0;transform:translateY(24px)}}
+.ab-tp h3{font-size:clamp(2.4rem,5vw,4.4rem);margin-bottom:1rem}
+.ab-tp .clk2{font-family:var(--serif);font-style:italic;color:var(--moss);font-size:1.4rem;margin-bottom:1.2rem;display:block}
+.ab-tp p{max-width:440px;font-size:1.1rem}
+.ab-tp .btn{margin-top:2rem}
+
+/* guest voice: one big quote */
+.ab-vo{padding:8rem 0;overflow:hidden}
+.ab-qw{position:relative;margin-top:3rem;display:grid}
+.ab-qw figure{grid-area:1/1;opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s;pointer-events:none}
+.ab-qw figure.on{opacity:1;transform:none;pointer-events:auto}
+.ab-qw q{display:block;quotes:none;font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,3.8vw,3.2rem);line-height:1.2;letter-spacing:-.02em;max-width:1000px}
+.ab-qw q::before{content:"“";display:block;font-size:2.4em;line-height:.6;color:var(--saf);margin-bottom:.4rem}
+.ab-qw figcaption{margin-top:1.8rem;display:flex;align-items:center;gap:.8rem}
+.ab-qw figcaption i{width:42px;height:42px;border-radius:50%;background:var(--saf);color:var(--ink);display:grid;place-items:center;font-style:normal;font-family:var(--serif)}
+.ab-dots{display:flex;gap:.7rem;margin-top:3rem}
+.ab-dots button{width:46px;height:4px;border-radius:9px;border:0;background:rgba(245,239,226,.25);cursor:pointer;overflow:hidden;position:relative;padding:0}
+.ab-dots button::after{content:"";position:absolute;inset:0;background:var(--saf);transform:scaleX(0);transform-origin:left}
+.ab-dots button.on::after{transform:scaleX(1);transition:transform 6s linear}
+
+/* closing card */
+.ab-end{background:var(--sand);padding:6rem 0}
+.ab-card{position:relative;overflow:hidden;border-radius:calc(var(--r)*1.4);background:var(--ink);color:var(--cream);padding:clamp(2.5rem,6vw,5.5rem);display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:end}
+.ab-card::before{content:"";position:absolute;width:50vmax;height:50vmax;right:-20vmax;top:-26vmax;background:radial-gradient(circle,rgba(240,160,48,.32),transparent 60%);pointer-events:none}
+.ab-card>*{position:relative}
+.ab-card h2{font-size:clamp(2.6rem,6vw,5.2rem)}
+.ab-card p{opacity:.82;margin:1.2rem 0 0;max-width:420px}
+.ab-card .acts{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.ab-card .info{display:grid;gap:1.4rem}
+.ab-card .info div{padding-bottom:1.2rem;border-bottom:1px solid rgba(245,239,226,.16)}
+.ab-card .info h4{color:var(--saf);font-size:1.35rem;margin-bottom:.2rem}
+.ab-card .info a:hover{color:var(--saf)}
+
+@media(max-width:900px){
+ .ab-hero{min-height:80vh}
+ .ab-in,.ab-row,.ab-tp,.ab-card{grid-template-columns:1fr;gap:2.5rem}
+ .ab-in .lead{position:relative;top:0}
+ .ab-pr .mn{grid-template-columns:1fr}.ab-pv{display:none}
+ .ab-row{margin-bottom:4.5rem}.ab-row.rev .ph{order:0}
+ .ab-nm .g{grid-template-columns:1fr 1fr;gap:2.4rem 1.2rem}
+ .ab-ki{padding:5rem 0 4rem}.ab-vo{padding:5rem 0}
+}
+@media(max-width:560px){.ab-seal{display:none}.ab-nm .g{grid-template-columns:1fr 1fr}.ab-hero h1{font-size:clamp(3.2rem,15vw,4.6rem)}}
